@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Gerenciamento_Financeiro.core.entities;
 
+
 namespace Gerenciamento_Financeiro.core.interfaces
 {
-    public interface ItransacaoRepository
+    public interface ItransacaoServices
     {
         public List<transacao> BuscarPorData(DateOnly DataBusca);
 

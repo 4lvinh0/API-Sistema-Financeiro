@@ -13,7 +13,7 @@ namespace Gerenciamento_Financeiro.core.entities
 
         public bool tipoOperacao  { get; set; } //True para entrada, False para saída
 
-        public DateTime dataOperacao  { get; set; }
+        public DateOnly dataOperacao  { get; set; }
 
         public decimal valorPosOperacao  { get; set; }
     }
