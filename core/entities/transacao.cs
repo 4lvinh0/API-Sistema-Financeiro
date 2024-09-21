@@ -6,7 +6,7 @@ using Gerenciamento_Financeiro.core.enums;
 
 namespace Gerenciamento_Financeiro.core.entities
 {
-    public class transacao
+    public class Transacao
     {
         public int transacaoId { get; set; }
 

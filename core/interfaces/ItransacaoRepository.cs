@@ -8,15 +8,15 @@ namespace Gerenciamento_Financeiro.core.interfaces
 {
     public interface ItransacaoRepository
     {
-        public List<transacao> BuscarPorData(DateOnly DataBusca);
+        public List<Transacao> BuscarPorData(DateOnly DataBusca);
 
-        public List<transacao> BuscarPorTipoDeOperacao(bool tipoOperacao);
+        public List<Transacao> BuscarPorTipoDeOperacao(bool tipoOperacao);
 
-        public transacao BuscarPorID(int Id);
+        public Transacao BuscarPorID(int Id);
 
-        public void AdicionarTransacao(transacao transacao);
+        public void AdicionarTransacao(Transacao transacao);
 
-        public void ModificarTransacao(transacao transacao);
+        public void ModificarTransacao(Transacao transacao);
 
         public void ExcluirTransacaoPorID(int Id);
     }

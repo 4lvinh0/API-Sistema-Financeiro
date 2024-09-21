@@ -14,6 +14,6 @@ namespace Gerenciamento_Financeiro.infrastructure.data
 
         }
 
-        public DbSet<transacao> transacao { get; set; }
+        public DbSet<Transacao> transacao { get; set; }
     }
 }

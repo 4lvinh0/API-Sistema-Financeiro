@@ -18,7 +18,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             _context = context;
         }
 
-        public List<transacao> BuscarPorData(DateOnly DataBusca)
+        public List<Transacao> BuscarPorData(DateOnly DataBusca)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public List<transacao> BuscarPorTipoDeOperacao(tipoOperacao tipoOperacao)
+        public List<Transacao> BuscarPorTipoDeOperacao(tipoOperacao tipoOperacao)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public transacao BuscarPorID(int Id)
+        public Transacao BuscarPorID(int Id)
         {
 
             try
@@ -78,7 +78,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public void AdicionarTransacao(transacao transacao)
+        public void AdicionarTransacao(Transacao transacao)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public void ModificarTransacao(transacao transacao)
+        public void ModificarTransacao(Transacao transacao)
         {
             try
             {
@@ -128,7 +128,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public List<transacao> BuscarPorTipoDeOperacao(bool tipoOperacao)
+        public List<Transacao> BuscarPorTipoDeOperacao(bool tipoOperacao)
         {
             throw new NotImplementedException();
         }

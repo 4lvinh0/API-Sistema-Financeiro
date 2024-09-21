@@ -39,7 +39,7 @@ app.UseHttpsRedirection();
 app.MapGet("/", () => "Hello World!");
 
 
-app.MapPost("/AdicionarTransacao", (transacao transacao, transacaoRepository teste) =>
+app.MapPost("/AdicionarTransacao", (Transacao transacao, transacaoRepository teste) =>
 { 
     teste.AdicionarTransacao(transacao);
     return Results.Ok("Concluida com sucesso");
