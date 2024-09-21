@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Gerenciamento_Financeiro.core.entities;
+using Gerenciamento_Financeiro.core.enums;
 
 
 namespace Gerenciamento_Financeiro.core.interfaces
 {
     public interface ItransacaoServices
     {
-        public List<Transacao> BuscarPorData(DateOnly DataBusca);
+        public List<Transacao> BuscarPorDataService(DateOnly DataBusca);
 
-        public List<Transacao> BuscarPorTipoDeOperacao(bool tipoOperacao);
+        public List<Transacao> BuscarPorTipoDeOperacaoService(tipoOperacao tipoOperacao);
 
-        public Transacao BuscarPorID(int Id);
+        public Transacao BuscarPorIDService(int Id);
 
-        public void AdicionarTransacao(Transacao transacao);
+        public void AdicionarTransacaoService(Transacao transacao);
 
-        public void ModificarTransacao(Transacao transacao);
+        public void ModificarTransacaoService(Transacao transacao);
 
-        public void ExcluirTransacaoPorID(int Id);
+        public void ExcluirTransacaoPorIDService(int Id);
     }
 }
