@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Gerenciamento_Financeiro.core.interfaces;
 using Gerenciamento_Financeiro.core.entities;
 using Gerenciamento_Financeiro.infrastructure.data;
+using Gerenciamento_Financeiro.core.enums;
 
 
 namespace Gerenciamento_Financeiro.infrastructure.repositories
@@ -37,7 +38,7 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
             }
         }
 
-        public List<transacao> BuscarPorTipoDeOperacao(bool tipoOperacao)
+        public List<transacao> BuscarPorTipoDeOperacao(tipoOperacao tipoOperacao)
         {
             try
             {
@@ -45,10 +46,11 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
                     .Where(t => t.tipoOperacao == tipoOperacao)
                     .ToList();
 
-                if (result == null)
+                if (result == null || !result.Any()) // Verificar se a lista está vazia ou nula
                 {
                     throw new Exception("Transação não encontrada");
                 }
+
                 return result;
             }
             catch (Exception ex)
@@ -124,6 +126,11 @@ namespace Gerenciamento_Financeiro.infrastructure.repositories
                 throw new Exception($"Erro ao buscar a transação: {ex.Message}");
 
             }
+        }
+
+        public List<transacao> BuscarPorTipoDeOperacao(bool tipoOperacao)
+        {
+            throw new NotImplementedException();
         }
     }
 }
